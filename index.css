@@ -184,7 +184,7 @@ header {
 }
 @media (min-width: 850px) {
     .tweet {
-        padding: 120px 0;
+        padding: 90px 0;
         max-width: 800px;
         margin: auto;
     }
