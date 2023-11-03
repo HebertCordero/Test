@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My First Site</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <link rel="icon" type="image/png" rel="noopener" target="_blank" href="assets/favicon.svg">
 </head>
 <body>
-    <h1>Test Page</h1>
+    <article class="tweet">
+        <header>
+            <div class="tweet-profile">
+                <img src="./assets/profile.png" alt="User Profile Picture"/>
+                <div class="user-info">
+                    <span class="name">HebertCordero</span>
+                    <span class="username">@HebertCordero</span>
+                </div>
+            </div>
+            <div class="tweet-actions">
+                <button class="follow-btn">Follow</button>
+                <div class="tweet-options">
+                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1C3.58621 3.57263 8.96552 8.773 8.75862 8.99351C8.55172 9.21403 13.4138 3.75638 16 1" stroke="#848484"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+        <div class="tweet-content">
+            <p>When you make your first web site.</p>
+            <picture>
+                <source srcset="./assets/tweet-media.gif" media="(max-width: 599px)"/>
+                <source srcset="./assets/tweet-media.gif" media="(min-width: 600px) and (max-width: 799px)"/>
+                <source srcset="./assets/tweet-media.gif" media="(min-width: 800px)" />
+                <img class="tweet-img" src="./assets/tweet-media.gif" alt="Tweet Image"/>
+            </picture>
+        </div>
+        <div class="tweet-info">
+            <div class="timestamp">
+                <p>10:46 PM - 1 Nov 2023</p>
+            </div>
+            <div class="engagement">
+                <div class="stats">
+                    <p><span>54</span> Retweets</p>
+                    <p><span>654</span> Likes</p>
+                </div>
+                <div class="divider"></div>
+                <ul class="likedBy">
+                    <li>
+                        <img src="./assets/profile.png"/>
+                    </li>
+                    <li>
+                        <img src="./assets/profile.png"/>
+                    </li>
+                    <li>
+                        <img src="./assets/profile.png"/>
+                    </li>
+                    <li>
+                        <img src="./assets/profile.png"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
 </body>
 </html>

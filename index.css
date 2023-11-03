@@ -1,0 +1,194 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+/* Variables */
+:root {
+    --primary: #000;
+    --secondary: #fff;
+    --lightPrim: #C1C1C1;
+    --heavyPrim: #C6C6C6;
+    --infoGray: #999696;
+    --tweeterBlue: #00BAF4;
+}
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+body {
+    background-color: #FCFFFF;
+}
+/* Tweet */
+.tweet {
+    padding: 30px 15px;
+}
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tweet-profile {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.tweet-profile img {
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user-info .name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.user-info .username {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--lightPrim);
+}
+.tweet-actions {
+    display: flex;
+    align-items: center;
+}
+.tweet-actions div {
+    display: flex;
+    width: 25px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.follow-btn {
+    width: auto;
+    all: unset;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: var(--tweeterBlue);
+    border: 1px solid var(--tweeterBlue);
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* Tweet content */
+.tweet-content {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin-top: 8px;
+}
+.tweet-content p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1C1C1C;
+}
+.tweet-img {
+    width: 100%;
+    display: block;
+}
+/* Tweet Info */
+.tweet-info {
+    display: flex;
+    flex-direction: column;
+}
+.tweet-info .timestamp {
+    margin: 10px 0;
+}
+.tweet-info .timestamp p {
+    color: var(--infoGray);
+    font-size: 14px;
+}
+.engagement {
+    height: 45px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--lightPrim);
+    border-bottom: 1px solid var(--lightPrim);
+    align-items: center;
+    justify-content: flex-start;
+}
+.engagement .divider {
+    height: 100%;
+    width: 1px;
+    display: block;
+    background-color: var(--lightPrim);
+}
+.engagement .stats {
+    width: 305px;
+    display: flex;
+    gap: 8px;
+}
+.engagement .stats::after{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--lightPrim);
+}
+.engagement div p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--infoGray);
+}
+.engagement div p span {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary);
+}
+.likedBy {
+    gap: 8px;
+    display: flex;
+    overflow-x: scroll;
+}
+.likedBy::-webkit-scrollbar {
+    display: none;
+}
+.likedBy li {
+    list-style-type: none;
+}
+.likedBy img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+@media (min-width: 370px) {
+    .engagement .stats {
+        width: 200px;
+        display: flex;
+        gap: 8px;
+    }
+    .tweet-profile {
+        gap: 15px;
+    }
+    .tweet-profile img {
+        width: 60px;
+        height: 60px;
+    }
+    .follow-btn {
+        width: auto;
+        padding: 5px 25px;
+    }
+}
+@media (min-width: 600px) {
+    .tweet {
+        padding: 60px 80px;
+    }
+    .tweet-actions div {
+        display: flex;
+        width: 45px;
+    }
+}
+@media (min-width: 850px) {
+    .tweet {
+        padding: 120px 0;
+        max-width: 800px;
+        margin: auto;
+    }
+    .tweet-content p {
+        font-size: 20px;
+    }
+}
